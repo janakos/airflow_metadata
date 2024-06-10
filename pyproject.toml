@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "metadata_manager"
+description = "Tool to manage Airflow metadata."
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "google-api-python-client",
+    "google-cloud-secret-manager"
+]
+version = "1.0.0"
+
+[project.scripts]
+metadata_manager = "metadata_manager.metadata_manager_base:main"
